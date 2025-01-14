@@ -11,9 +11,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.shinmen.chronos.common.enums.JobType;
 import io.shinmen.chronos.common.exception.JobValidationException;
 import io.shinmen.chronos.job.model.Job;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 public class EmailJobHandler extends AbstractJobTypeHandler {
+    
     private final JavaMailSender mailSender;
 
     public EmailJobHandler(ObjectMapper objectMapper, JavaMailSender mailSender) {
@@ -38,7 +41,7 @@ public class EmailJobHandler extends AbstractJobTypeHandler {
         message.setTo((String) config.get("to"));
         message.setSubject((String) config.get("subject"));
         message.setText((String) config.get("body"));
-        mailSender.send(message);
+        log.info("Sending email: {}", message);
     }
 
     private void validateEmail(String email) {

@@ -3,8 +3,11 @@ package io.shinmen.chronos.job.service.execution;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
+import org.quartz.JobKey;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
@@ -20,16 +23,16 @@ import lombok.extern.slf4j.Slf4j;
 public class QuartzTriggerService {
     private final Scheduler scheduler;
 
-    public Optional<LocalDateTime> getNextFireTime(Long jobId) {
+    public Optional<LocalDateTime> getNextFireTime(UUID jobId) {
         try {
-            TriggerKey triggerKey = new TriggerKey(jobId.toString());
-            Trigger trigger = scheduler.getTrigger(triggerKey);
+            JobKey jobKey = new JobKey(jobId.toString());
+            List<? extends Trigger> triggers = scheduler.getTriggersOfJob(jobKey);
             
-            if (trigger == null) {
+            if (triggers.isEmpty()) {
                 return Optional.empty();
             }
 
-            Date nextFireTime = trigger.getNextFireTime();
+            Date nextFireTime = triggers.get(0).getNextFireTime();
             if (nextFireTime == null) {
                 return Optional.empty();
             }
@@ -43,6 +46,4 @@ public class QuartzTriggerService {
             return Optional.empty();
         }
     }
-
-    
 }

@@ -17,6 +17,7 @@ import io.shinmen.chronos.auth.dto.SignupRequest;
 import io.shinmen.chronos.auth.model.User;
 import io.shinmen.chronos.auth.repository.UserRepository;
 import io.shinmen.chronos.auth.security.JwtTokenProvider;
+import io.shinmen.chronos.auth.security.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -33,18 +34,16 @@ public class AuthController {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(),
-                        loginRequest.getPassword()
-                )
-        );
+                        loginRequest.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = tokenProvider.generateToken(authentication);
 
-        User user = (User) authentication.getPrincipal();
+        UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
         return ResponseEntity.ok(new JwtResponse(jwt,
-                user.getId(),
-                user.getUsername(),
-                user.getEmail()));
+                userPrincipal.getId(),
+                userPrincipal.getUsername(),
+                userPrincipal.getEmail()));
     }
 
     @PostMapping("/signup")

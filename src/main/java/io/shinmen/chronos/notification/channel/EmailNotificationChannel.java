@@ -21,7 +21,7 @@ public class EmailNotificationChannel implements NotificationChannel {
         emailMessage.setTo(recipient);
         emailMessage.setSubject(subject);
         emailMessage.setText(message);
-        mailSender.send(emailMessage);
+        log.info("Sending email: {}", message);
     }
 
     @Override

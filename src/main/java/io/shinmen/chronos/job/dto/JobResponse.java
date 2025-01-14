@@ -1,6 +1,7 @@
 package io.shinmen.chronos.job.dto;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import io.shinmen.chronos.common.enums.JobStatus;
 import io.shinmen.chronos.common.enums.JobType;
@@ -8,7 +9,7 @@ import lombok.Data;
 
 @Data
 public class JobResponse {
-    private Long id;
+    private UUID id;
     private String name;
     private String description;
     private String cronExpression;

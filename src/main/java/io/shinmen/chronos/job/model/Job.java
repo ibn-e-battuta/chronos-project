@@ -6,7 +6,10 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import org.quartz.CronExpression;
 
 import io.shinmen.chronos.auth.model.User;
@@ -36,7 +39,7 @@ import lombok.Data;
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     @Column(nullable = false)
     private String name;
@@ -44,7 +47,7 @@ public class Job {
     @Column(nullable = false)
     private String description;
 
-    @Column(nullable = false)
+    @Column(name = "cron_expression", nullable = true)
     private String cronExpression;
 
     @Enumerated(EnumType.STRING)
@@ -56,6 +59,7 @@ public class Job {
     private JobType jobType;
 
     @Column(columnDefinition = "jsonb")
+    @JdbcTypeCode(SqlTypes.JSON)
     private String jobConfiguration;
 
     private LocalDateTime startTime;

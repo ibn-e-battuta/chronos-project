@@ -1,7 +1,10 @@
 package io.shinmen.chronos.job.service.execution;
 
+import java.util.UUID;
+
 import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
+import org.quartz.JobDataMap;
 import org.quartz.JobDetail;
 import org.quartz.JobKey;
 import org.quartz.Scheduler;
@@ -19,10 +22,26 @@ public class QuartzJobSchedulerService {
     private final Scheduler scheduler;
 
     public void scheduleJob(Job job) {
-        JobDetail jobDetail = buildJobDetail(job);
-        Trigger trigger = buildJobTrigger(job);
-
         try {
+            JobDetail jobDetail = buildJobDetail(job);
+            Trigger trigger;
+            
+            if (job.isRunNow()) {
+                // For immediate execution, use a simple trigger
+                trigger = TriggerBuilder.newTrigger()
+                    .withIdentity(job.getId().toString())
+                    .forJob(jobDetail)
+                    .startNow()
+                    .build();
+            } else {
+                // For scheduled execution, use a cron trigger
+                trigger = TriggerBuilder.newTrigger()
+                    .withIdentity(job.getId().toString())
+                    .forJob(jobDetail)
+                    .withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()))
+                    .build();
+            }
+            
             scheduler.scheduleJob(jobDetail, trigger);
         } catch (SchedulerException e) {
             throw new RuntimeException("Error scheduling job", e);
@@ -34,7 +53,38 @@ public class QuartzJobSchedulerService {
         scheduleJob(job);
     }
 
-    public void deleteJob(Long jobId) {
+    private JobDetail buildJobDetail(Job job) {
+        JobDataMap jobDataMap = new JobDataMap();
+        jobDataMap.put("jobId", job.getId());
+        
+        return JobBuilder.newJob()
+            .ofType(QuartzJobExecutor.class)
+            .withIdentity(job.getId().toString())
+            .withDescription(job.getDescription())
+            .usingJobData(jobDataMap)
+            .storeDurably()
+            .build();
+    }
+
+    private Trigger buildJobTrigger(Job job) {
+        TriggerBuilder<Trigger> builder = TriggerBuilder.newTrigger()
+                .withIdentity(job.getId().toString())
+                .withDescription(job.getDescription())
+                .forJob(job.getId().toString());
+
+        if (job.isRunNow()) {
+            builder.startNow();
+            if (job.getCronExpression() != null) {
+                builder.withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()));
+            }
+        } else {
+            builder.withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()));
+        }
+
+        return builder.build();
+    }
+
+    public void deleteJob(UUID jobId) {
         try {
             scheduler.deleteJob(new JobKey(jobId.toString()));
         } catch (SchedulerException e) {
@@ -42,32 +92,7 @@ public class QuartzJobSchedulerService {
         }
     }
 
-    private JobDetail buildJobDetail(Job job) {
-        return JobBuilder.newJob(QuartzJobExecutor.class)
-                .withIdentity(job.getId().toString())
-                .withDescription(job.getDescription())
-                .usingJobData("jobId", job.getId())
-                .storeDurably()
-                .build();
-    }
-
-    private Trigger buildJobTrigger(Job job) {
-        TriggerBuilder<Trigger> triggerBuilder = TriggerBuilder.newTrigger()
-                .withIdentity(job.getId().toString());
-                
-        if (job.isRunNow()) {
-            triggerBuilder.startNow();
-            if (job.getCronExpression() != null && !job.getCronExpression().isEmpty()) {
-                triggerBuilder.withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()));
-            }
-        } else {
-            triggerBuilder.withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()));
-        }
-        
-        return triggerBuilder.build();
-    }
-
-    public void pauseJob(Long jobId) {
+    public void pauseJob(UUID jobId) {
         try {
             scheduler.pauseJob(new JobKey(jobId.toString()));
         } catch (SchedulerException e) {
@@ -75,7 +100,7 @@ public class QuartzJobSchedulerService {
         }
     }
 
-    public void resumeJob(Long jobId) {
+    public void resumeJob(UUID jobId) {
         try {
             scheduler.resumeJob(new JobKey(jobId.toString()));
         } catch (SchedulerException e) {
@@ -83,4 +108,3 @@ public class QuartzJobSchedulerService {
         }
     }
 }
-

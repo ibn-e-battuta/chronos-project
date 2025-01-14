@@ -22,11 +22,9 @@ public class NotificationService {
 
     public void sendNotification(Job job, NotificationType type, String subject, String message) {
         User user = job.getUser();
-
-        // Get user's notification preferences for this notification type
         List<NotificationPreference> preferences = user.getNotificationPreferences().stream()
-            .filter(pref -> pref.getType() == type && pref.isEnabled())
-            .collect(Collectors.toList());
+                .filter(pref -> pref.getType() == type && pref.isEnabled())
+                .collect(Collectors.toList());
 
         // If no specific preferences, use default channels
         if (preferences.isEmpty()) {
@@ -52,7 +50,7 @@ public class NotificationService {
                     NotificationChannel channel = notificationRegistry.getChannel(pref.getChannelType());
                     channel.sendNotification(pref.getDestination(), subject, message);
                 } catch (Exception e) {
-                    log.error("Failed to send notification via channel {} for job {}", 
+                    log.error("Failed to send notification via channel {} for job {}",
                             pref.getChannelType(), job.getId(), e);
                 }
             }

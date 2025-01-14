@@ -3,6 +3,7 @@ package io.shinmen.chronos.job.service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -63,13 +64,13 @@ public class JobService {
     }
 
     @Transactional
-    public void deleteJob(Long jobId) {
+    public void deleteJob(UUID jobId) {
         schedulerService.deleteJob(jobId);
         jobRepository.deleteById(jobId);
     }
 
     @Transactional
-    public void cancelJob(Long jobId) {
+    public void cancelJob(UUID jobId) {
         Job job = jobRepository.findById(jobId)
                 .orElseThrow(() -> new JobNotFoundException("Job not found"));
         job.setStatus(JobStatus.CANCELLED);
@@ -85,13 +86,13 @@ public class JobService {
     }
 
     @Transactional(readOnly = true)
-    public Job getJob(Long jobId) {
+    public Job getJob(UUID jobId) {
         return jobRepository.findById(jobId)
                 .orElseThrow(() -> new RuntimeException("Job not found"));
     }
 
     @Transactional
-    public JobExecution recordJobExecution(Long jobId, LocalDateTime startTime, LocalDateTime endTime,
+    public JobExecution recordJobExecution(UUID jobId, LocalDateTime startTime, LocalDateTime endTime,
             String errorMessage) {
         Job job = jobRepository.findById(jobId)
                 .orElseThrow(() -> new RuntimeException("Job not found"));
@@ -106,7 +107,7 @@ public class JobService {
     }
 
     @Transactional
-    public Job pauseJob(Long jobId) {
+    public Job pauseJob(UUID jobId) {
         Job job = jobRepository.findById(jobId)
                 .orElseThrow(() -> new JobNotFoundException("Job not found"));
 
@@ -123,7 +124,7 @@ public class JobService {
     }
 
     @Transactional
-    public Job resumeJob(Long jobId) {
+    public Job resumeJob(UUID jobId) {
         Job job = jobRepository.findById(jobId)
                 .orElseThrow(() -> new JobNotFoundException("Job not found"));
 

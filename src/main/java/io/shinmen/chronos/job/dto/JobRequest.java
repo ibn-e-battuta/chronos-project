@@ -1,5 +1,7 @@
 package io.shinmen.chronos.job.dto;
 
+import java.util.Map;
+
 import io.shinmen.chronos.common.enums.JobType;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotBlank;
@@ -21,8 +23,8 @@ public class JobRequest {
     @NotNull(message = "Job type is required")
     private JobType jobType;
 
-    @NotBlank(message = "Job configuration is required")
-    private String jobConfiguration;
+    @NotNull(message = "Job configuration is required")
+    private Map<String, Object> jobConfiguration; 
     
     private boolean runNow = false;
 

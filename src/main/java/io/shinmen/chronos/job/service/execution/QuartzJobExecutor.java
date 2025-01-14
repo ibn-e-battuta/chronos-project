@@ -39,9 +39,9 @@ public class QuartzJobExecutor extends QuartzJobBean {
 
     @Override
     protected void executeInternal(@NonNull JobExecutionContext context) throws JobExecutionException {
-        Long jobId = context.getJobDetail().getJobDataMap().getLong("jobId");
+        String jobId = context.getJobDetail().getJobDataMap().getString("jobId");
         log.info("Starting job execution for job ID: {}", jobId);
-        Job job = jobRepository.findById(jobId)
+        Job job = jobRepository.findById(UUID.fromString(jobId))
                 .orElseThrow(() -> new JobExecutionException("Job not found"));
 
         String executionId = UUID.randomUUID().toString();
@@ -70,7 +70,7 @@ public class QuartzJobExecutor extends QuartzJobBean {
         } finally {
             LocalDateTime endTime = LocalDateTime.now();
             long duration = Duration.between(startTime, endTime).toMillis();
-            jobService.recordJobExecution(jobId, startTime, endTime, errorMessage);
+            jobService.recordJobExecution(UUID.fromString(jobId), startTime, endTime, errorMessage);
             metricsService.recordJobExecution(job.getJobType().toString(), success, duration);
         }
     }

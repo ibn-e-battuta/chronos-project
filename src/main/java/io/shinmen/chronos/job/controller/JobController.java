@@ -1,6 +1,7 @@
 package io.shinmen.chronos.job.controller;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
@@ -16,8 +17,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.shinmen.chronos.auth.model.User;
+import io.shinmen.chronos.auth.repository.UserRepository;
+import io.shinmen.chronos.auth.security.UserDetailsImpl;
+import io.shinmen.chronos.common.enums.JobStatus;
+import io.shinmen.chronos.common.exception.JobValidationException;
 import io.shinmen.chronos.job.dto.JobRequest;
 import io.shinmen.chronos.job.dto.JobResponse;
 import io.shinmen.chronos.job.model.Job;
@@ -31,20 +38,39 @@ import lombok.RequiredArgsConstructor;
 public class JobController {
     private final JobService jobService;
     private final QuartzTriggerService quartzTriggerService;
+    private final ObjectMapper objectMapper;
+    private final UserRepository userRepository;
 
     @PostMapping
     public ResponseEntity<JobResponse> createJob(
             @RequestBody JobRequest request,
-            @AuthenticationPrincipal User user) throws JsonProcessingException {
+            @AuthenticationPrincipal UserDetailsImpl userDetails) throws JsonProcessingException {
+
+        User user = userRepository.findById(userDetails.getId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        
         Job job = new Job();
         job.setName(request.getName());
         job.setDescription(request.getDescription());
-        job.setCronExpression(request.getCronExpression());
-        job.setMaxRetries(request.getMaxRetries());
-        job.setJobType(request.getJobType());
-        job.setJobConfiguration(request.getJobConfiguration());
         job.setRunNow(request.isRunNow());
         job.setUser(user);
+        
+        // Set cron expression only if not running immediately
+        if (!request.isRunNow()) {
+            if (request.getCronExpression() == null || request.getCronExpression().trim().isEmpty()) {
+                throw new JobValidationException("Cron expression is required for scheduled jobs");
+            }
+            job.setCronExpression(request.getCronExpression());
+        }
+
+        job.setMaxRetries(request.getMaxRetries());
+        job.setJobType(request.getJobType());
+        
+        // Convert configuration to JSON string
+        String jsonConfig = objectMapper.writeValueAsString(request.getJobConfiguration());
+        job.setJobConfiguration(jsonConfig);
+        
+        job.setStatus(JobStatus.SCHEDULED);
 
         Job savedJob = jobService.createJob(job);
         return ResponseEntity.ok(convertToResponse(savedJob));
@@ -60,16 +86,16 @@ public class JobController {
     }
 
     @GetMapping("/{jobId}")
-    public ResponseEntity<JobResponse> getJob(@PathVariable Long jobId) {
+    public ResponseEntity<JobResponse> getJob(@PathVariable UUID jobId) {
         Job job = jobService.getJob(jobId);
         return ResponseEntity.ok(convertToResponse(job));
     }
 
     @PutMapping("/{jobId}")
     public ResponseEntity<JobResponse> updateJob(
-            @PathVariable Long jobId,
+            @PathVariable UUID jobId,
             @RequestBody JobRequest request,
-            @AuthenticationPrincipal User user) {
+            @AuthenticationPrincipal User user) throws JsonProcessingException {
         Job job = jobService.getJob(jobId);
         if (!job.getUser().getId().equals(user.getId())) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
@@ -80,7 +106,7 @@ public class JobController {
         job.setCronExpression(request.getCronExpression());
         job.setMaxRetries(request.getMaxRetries());
         job.setJobType(request.getJobType());
-        job.setJobConfiguration(request.getJobConfiguration());
+        job.setJobConfiguration(objectMapper.writeValueAsString(request.getJobConfiguration()));
 
         Job updatedJob = jobService.updateJob(job);
         return ResponseEntity.ok(convertToResponse(updatedJob));
@@ -88,7 +114,7 @@ public class JobController {
 
     @DeleteMapping("/{jobId}")
     public ResponseEntity<Void> deleteJob(
-            @PathVariable Long jobId,
+            @PathVariable UUID jobId,
             @AuthenticationPrincipal User user) {
         Job job = jobService.getJob(jobId);
         if (!job.getUser().getId().equals(user.getId())) {
@@ -101,7 +127,7 @@ public class JobController {
 
     @PostMapping("/{jobId}/cancel")
     public ResponseEntity<JobResponse> cancelJob(
-            @PathVariable Long jobId,
+            @PathVariable UUID jobId,
             @AuthenticationPrincipal User user) {
         Job job = jobService.getJob(jobId);
         if (!job.getUser().getId().equals(user.getId())) {
@@ -123,16 +149,16 @@ public class JobController {
         response.setPaused(job.isPaused());
         response.setRetryCount(job.getRetryCount());
         response.setMaxRetries(job.getMaxRetries());
-        
+
         quartzTriggerService.getNextFireTime(job.getId())
-            .ifPresent(response::setNextRunTime);
-        
+                .ifPresent(response::setNextRunTime);
+
         return response;
     }
 
     @PostMapping("/{jobId}/pause")
     public ResponseEntity<JobResponse> pauseJob(
-            @PathVariable Long jobId,
+            @PathVariable UUID jobId,
             @AuthenticationPrincipal User user) {
         Job job = jobService.getJob(jobId);
         if (!job.getUser().getId().equals(user.getId())) {
@@ -145,7 +171,7 @@ public class JobController {
 
     @PostMapping("/{jobId}/resume")
     public ResponseEntity<JobResponse> resumeJob(
-            @PathVariable Long jobId,
+            @PathVariable UUID jobId,
             @AuthenticationPrincipal User user) {
         Job job = jobService.getJob(jobId);
         if (!job.getUser().getId().equals(user.getId())) {
@@ -156,5 +182,4 @@ public class JobController {
         return ResponseEntity.ok(convertToResponse(resumedJob));
     }
 
-    
 }

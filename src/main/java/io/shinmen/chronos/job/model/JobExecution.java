@@ -1,6 +1,7 @@
 package io.shinmen.chronos.job.model;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import io.shinmen.chronos.common.enums.ExecutionStatus;
 import jakarta.persistence.Column;
@@ -22,7 +23,7 @@ import lombok.Data;
 public class JobExecution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "job_id", nullable = false)
