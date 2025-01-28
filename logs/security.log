@@ -1,0 +1,146 @@
+2025-01-15 00:00:07 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:00:28 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:01:50 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 00:01:53 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 00:02:51 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:03:03 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:04:42 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:04:56 [http-nio-8080-exec-1] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 00:07:45 [http-nio-8080-exec-7] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 00:11:31 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:11:42 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:12:23 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /actuator/health
+2025-01-15 00:12:27 [http-nio-8080-exec-9] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /favicon.ico
+2025-01-15 00:13:40 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:13:52 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 00:16:50 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:17:02 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:17:33 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:17:43 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:17:54 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:18:57 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:19:27 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 00:20:02 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 00:20:16 [http-nio-8080-exec-6] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 00:21:57 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:22:10 [http-nio-8080-exec-3] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-14 18:56:03 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-14 18:59:16 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-14 18:59:35 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-14 18:59:39 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-14 18:59:45 [http-nio-8080-exec-6] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-14 19:06:14 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-14 19:06:33 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-14 19:06:36 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-14 19:06:43 [http-nio-8080-exec-6] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-14 19:11:44 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-14 19:12:26 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 00:44:26 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:45:34 [http-nio-8080-exec-5] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 00:45:37 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 00:46:53 [http-nio-8080-exec-8] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-14 19:19:53 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:52:40 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 00:52:48 [http-nio-8080-exec-1] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 00:52:51 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 00:52:57 [http-nio-8080-exec-6] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 01:08:11 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 01:10:26 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 01:10:36 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 01:10:39 [http-nio-8080-exec-6] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 01:10:47 [http-nio-8080-exec-10] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 01:23:58 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 01:24:13 [http-nio-8080-exec-2] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 01:24:13 [http-nio-8080-exec-2] ERROR i.s.c.auth.security.JwtTokenFilter - Cannot set user authentication
+org.springframework.security.core.userdetails.UsernameNotFoundException: User not found: demo_user
+	at io.shinmen.chronos.auth.security.CustomUserDetailsService.lambda$0(CustomUserDetailsService.java:20)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at io.shinmen.chronos.auth.security.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:20)
+	at io.shinmen.chronos.auth.security.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:35)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-01-15 01:24:17 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 01:24:20 [http-nio-8080-exec-6] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 01:24:26 [http-nio-8080-exec-8] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 01:25:49 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 01:26:08 [http-nio-8080-exec-1] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 01:30:54 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 01:31:08 [http-nio-8080-exec-1] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 01:31:10 [http-nio-8080-exec-4] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 01:31:16 [http-nio-8080-exec-7] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs
+2025-01-15 01:40:14 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-01-15 01:40:57 [http-nio-8080-exec-1] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signup
+2025-01-15 01:40:59 [http-nio-8080-exec-5] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/auth/signin
+2025-01-15 01:41:06 [http-nio-8080-exec-9] INFO  i.s.c.auth.security.JwtTokenFilter - Processing authentication for path: /api/jobs

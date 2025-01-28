@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_PATH" value="logs"/>
+    <property name="LOG_ARCHIVE" value="${LOG_PATH}/archive"/>
+
+    <!-- Console Appender -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Application Log Appender -->
+    <appender name="ApplicationLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/application.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_ARCHIVE}/application.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Job Execution Log Appender -->
+    <appender name="JobExecutionLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/job-execution.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_ARCHIVE}/job-execution.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Security Log Appender -->
+    <appender name="SecurityLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/security.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_ARCHIVE}/security.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Notification Log Appender -->
+    <appender name="NotificationLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/notifications.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_ARCHIVE}/notifications.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Async Appenders -->
+    <appender name="AsyncApp" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="ApplicationLog"/>
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <appender name="AsyncJob" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="JobExecutionLog"/>
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <appender name="AsyncSecurity" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="SecurityLog"/>
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <appender name="AsyncNotification" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="NotificationLog"/>
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <!-- Logger configurations -->
+    <!-- Base package logger -->
+    <logger name="io.shinmen.chronos" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncApp"/>
+    </logger>
+
+    <!-- Job related logging -->
+    <logger name="io.shinmen.chronos.job" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncApp"/>
+    </logger>
+
+    <!-- Job execution specific logging -->
+    <logger name="io.shinmen.chronos.job.service.execution" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncJob"/>
+    </logger>
+
+    <!-- Security related logging -->
+    <logger name="io.shinmen.chronos.auth.security" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncSecurity"/>
+    </logger>
+
+    <!-- Authentication logging -->
+    <logger name="org.springframework.security" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncSecurity"/>
+    </logger>
+
+    <!-- Notification logging -->
+    <logger name="io.shinmen.chronos.notification" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncNotification"/>
+    </logger>
+
+    <!-- Monitoring logging -->
+    <logger name="io.shinmen.chronos.monitoring" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncApp"/>
+    </logger>
+
+    <!-- Aspect logging -->
+    <logger name="io.shinmen.chronos.common.aspect" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncApp"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncApp"/>
+    </root>
+
+</configuration>

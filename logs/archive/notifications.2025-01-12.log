@@ -1,0 +1,5 @@
+2025-01-12 19:44:30 [main] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-12 19:44:30 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-12 19:44:30 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-12 19:44:30 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-12 19:44:30 [main] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]

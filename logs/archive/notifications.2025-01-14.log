@@ -1,0 +1,80 @@
+2025-01-14 13:09:56 [main] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 13:09:56 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 13:09:56 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 13:09:56 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 13:09:56 [main] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 18:54:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 18:54:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 18:54:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 18:54:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 18:54:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 18:57:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 18:57:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 18:57:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 18:57:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 18:57:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 19:01:41 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 19:01:41 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 19:01:41 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 19:01:41 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 19:01:41 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 19:22:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 19:22:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 19:22:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 19:22:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 19:22:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 18:03:35 [main] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 18:03:35 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 18:03:35 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 18:03:35 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 18:03:35 [main] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:34:09 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:34:09 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:34:09 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:34:09 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:34:09 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 18:05:21 [main] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 18:05:21 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 18:05:21 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 18:05:21 [main] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 18:05:21 [main] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:37:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:37:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:37:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:37:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:37:32 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:40:53 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:40:53 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:40:53 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:40:53 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:40:53 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:44:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:44:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:44:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:44:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:44:46 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:54:27 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:54:27 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:54:27 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:54:27 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:54:27 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:55:34 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:55:34 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:55:34 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:55:34 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:55:34 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:55:55 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:55:55 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:55:55 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:55:55 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:55:55 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:58:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:58:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:58:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:58:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:58:26 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
+2025-01-14 23:59:35 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Initializing notification channels...
+2025-01-14 23:59:35 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: CONSOLE (ConsoleNotificationChannel)
+2025-01-14 23:59:35 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: EMAIL (EmailNotificationChannel)
+2025-01-14 23:59:35 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Registering notification channel: LOG (LogNotificationChannel)
+2025-01-14 23:59:35 [restartedMain] INFO  i.s.c.n.r.NotificationRegistry - Notification channel registration complete. Registered channels: [CONSOLE, LOG, EMAIL]
